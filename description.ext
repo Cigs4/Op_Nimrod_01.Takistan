@@ -1,0 +1,97 @@
+#include "aegis_ace_settings.hpp"
+
+author = [FAB]Cigs4;
+onLoadName = Op. Nimrod 01;
+loadScreen = "INTRO.jpg";
+overviewPicture = "fab.jpg"
+onLoadMission="A disciplina é a mãe do êxito. -Ésquilo";
+joinUnassigned= 0;
+debriefing=1;
+showGPS=1;
+Respawn= "SIDE";
+RespawnDelay = 10;
+disabledAI=1;
+
+
+corpseLimit = 4;
+corpseRemovalMinTime = 20;
+corpseRemovalMaxTime = 35;
+
+wreckLimit = 3;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 120;
+
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 12;
+};
+
+class cfgMusic
+{
+	tracks[]={};
+	
+	class track1
+	{
+		name="handg";
+		sound[] = {handg.ogg, db+20, 1.0};
+	};
+	class track2
+	{
+		name="hell";
+		sound[] = {hell.ogg, db+10, 1.0};
+	};
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Missão Cumprida";
+		subtitle = "Operação Nimrod";
+		description = "A equipe GRIFO cumpriu seu objetivo plenamente.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class End2
+	{
+		// Titulo. Recomendo deixar missão abortada.
+		title = "Missão Abortada";
+
+		// Subtítulo. Recomendo colocar qual era o objetivo
+		subtitle = "A Unidade teve que abortar a missão.";
+
+		// Descrição. Colocar o que aconteceu.
+		description = "A equipe Grifo abortou a missão.";
+
+		// Imagem de fundo. Não recomendado.
+		pictureBackground = "";
+
+		// Icone de vítória. Pode deixar este mesmo.
+		picture = "b_inf";
+
+		// Cor do ícone. Pode deixar este mesmo.
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+   class loser
+    {
+		title = "A Missão Falhou";
+		subtitle = "Todo equipe Grifo morreu";
+		description = "Mesmo retornando fogo e lutando bravamente, Grifo pereceu no campo de batalha.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.1,0.2,1};
+	};
+};
+
+
+enableDebugConsole = 2;
+
+
+
+

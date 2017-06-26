@@ -1,0 +1,15 @@
+playmusic "track1";
+sleep 0.5;
+vip allowdamage false;
+vip allowfleeing 0;
+car1 allowdamage true;
+car2 allowdamage true;
+car1 setdamage 0.8;
+car1 sethit ["wheel_1_1_steering", 1];
+car1 sethit ["wheel_2_1_steering", 1];
+car1 setHit ["motor", 1];
+car2 setdamage 0.5;
+car2 sethit ["wheel_2_1_steering", 1];
+car2 sethit ["wheel_2_1_steering", 1];
+car2 setHit ["motor", 1];
+sleep 1;
